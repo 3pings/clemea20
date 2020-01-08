@@ -5,7 +5,7 @@ metadata:
   name: livewall-frontend
   namespace: default
   annotations:
-    opflex.cisco.com/endpoint-group: '{"policy-space":"$HOSTNAME","name":"livewall|frontend"}'
+    opflex.cisco.com/endpoint-group: '{"policy-space":"${HOSTNAME}","name":"livewall|frontend"}'
 spec:
   replicas: 1
   template:

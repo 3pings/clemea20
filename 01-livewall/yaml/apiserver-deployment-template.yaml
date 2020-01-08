@@ -5,7 +5,7 @@ metadata:
   name: livewall-apiserver
   namespace: default
   annotations:
-    opflex.cisco.com/endpoint-group: '{"policy-space":"$HOSTNAME","name":"livewall|api"}'
+    opflex.cisco.com/endpoint-group: '{"policy-space":"${HOSTNAME}","name":"livewall|api"}'
 spec:
   replicas: 1
   template:
@@ -30,11 +30,11 @@ spec:
         - name: appd_accesskey
           value: "9e3b433c-d509-4ea1-bb3b-05409a5aab24"
         - name: dbHost
-          value: "$DBHOST"
+          value: "DBHOST"
         - name: dbUser
-          value: "$DBUSER"
+          value: "DBUSER"
         - name: dbPass
-          value: "$DBPASS"
+          value: "DBPASS"
         - name: dbName
           value: "livewall"
         image: 10.139.12.210/cl-wall/apiserver:latest
