@@ -29,13 +29,13 @@ spec:
           value: "GREMLINS"
         - name: appd_accesskey
           value: "9e3b433c-d509-4ea1-bb3b-05409a5aab24"
-        - name: dbHost
+        - name: db_host
           value: "DBHOST"
-        - name: dbUser
+        - name: db_user
           value: "DBUSER"
-        - name: dbPass
+        - name: db_pass
           value: "DBPASS"
-        - name: dbName
+        - name: db_database
           value: "livewall"
         image: 10.139.12.210/cl-wall/apiserver:latest
         imagePullPolicy: Always
