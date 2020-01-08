@@ -5,7 +5,7 @@ metadata:
   name: livewall-event
   namespace: default
   annotations:
-    opflex.cisco.com/endpoint-group: '{"policy-space":"${HOSTNAME}","name":"livewall|collector"}'
+    opflex.cisco.com/endpoint-group: '{"policy-space":"apicTenant","name":"livewall|collector"}'
 spec:
   replicas: 1
   template:

@@ -2,11 +2,11 @@
 
 echo "Deploying CiscoLive Wall Application"
 
-sed -e "s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/weather-deployment-template.yaml > yaml/weather-deployment-ready.yaml
-sed -e "s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/event-deployment-template.yaml > yaml/event-deployment-ready.yaml
-sed -e "s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/incident-deployment-template.yaml > yaml/incident-deployment-ready.yaml
-sed -e "s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/apiserver-deployment-template.yaml > yaml/apiserver-deployment-ready.yaml
-sed -e "s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/frontend-deployment-template.yaml > yaml/frontend-deployment-ready.yaml
+sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/weather-deployment-template.yaml > yaml/weather-deployment-ready.yaml
+sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/event-deployment-template.yaml > yaml/event-deployment-ready.yaml
+sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/incident-deployment-template.yaml > yaml/incident-deployment-ready.yaml
+sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/apiserver-deployment-template.yaml > yaml/apiserver-deployment-ready.yaml
+sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/frontend-deployment-template.yaml > yaml/frontend-deployment-ready.yaml
 
 
 
