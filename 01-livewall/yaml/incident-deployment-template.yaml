@@ -1,0 +1,29 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: livewall-incident
+  namespace: default
+  annotations:
+    opflex.cisco.com/endpoint-group: '{"policy-space":"$HOSTNAME","name":"livewall|collector"}'
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: livewall-incident
+    spec:
+      containers:
+      - env:
+        - name: dbHost
+          value: "$DBHOST"
+        - name: dbUser
+          value: "$DBUSER"
+        - name: dbPass
+          value: "$DBPASS"
+        - name: dbName
+          value: "livewall"
+        - name: bing_maps_api_key
+          value: "AuqW9LUO744wxmr6ik0PiJYAGbtKqmelkReiUT5_jhP4Dgh4cwDH-m9vE5wLY2z3"
+        image: 3pings/livewall-incidents:latest
+        name: livewall-incident

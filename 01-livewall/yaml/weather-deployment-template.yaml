@@ -1,0 +1,30 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: livewall-weather
+  namespace: default
+  annotations:
+    opflex.cisco.com/endpoint-group: '{"policy-space":"$HOSTNAME","name":"livewall|collector"}'
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: livewall-weather
+    spec:
+      containers:
+      - env:
+        - name: dbHost
+          value: "$DBHOST"
+        - name: dbUser
+          value: "$DBUSER"
+        - name: dbPass
+          value: "$DBPASS"
+        - name: dbName
+          value: "livewall"
+        - name: owApiKey
+          value: "24a80b345497924fd082372e36bb675b"
+        image: 3pings/livewall-weather:latest
+        imagePullPolicy: Always
+        name: livewall-weather
