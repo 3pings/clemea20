@@ -16,11 +16,11 @@ spec:
       containers:
       - env:
         - name: dbHost
-          value: "DBHOST"
+          value: "$DBHOST"
         - name: dbUser
-          value: "DBUSER"
-        - name: dbpass
-          value: "DBPASS"
+          value: "$DBUSER"
+        - name: dbPass
+          value: "$DBPASS"
         - name: dbName
           value: "livewall"
         - name: bing_maps_api_key
