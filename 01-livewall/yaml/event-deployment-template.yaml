@@ -25,6 +25,6 @@ spec:
           value: "livewall"
         - name: tktmst_apikey
           value: "jhoNr55QefAMxZknSaI4RmhtmcB6A6xz"
-        image: 3pings/livewall-event:latest
+        image: 3pings/livewall-events:latest
         imagePullPolicy: Always
         name: livewall-event
