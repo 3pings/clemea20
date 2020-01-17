@@ -26,4 +26,5 @@ spec:
         - name: bing_maps_api_key
           value: "AuqW9LUO744wxmr6ik0PiJYAGbtKqmelkReiUT5_jhP4Dgh4cwDH-m9vE5wLY2z3"
         image: 3pings/livewall-incidents:latest
+        imagePullPolicy: Always
         name: livewall-incident

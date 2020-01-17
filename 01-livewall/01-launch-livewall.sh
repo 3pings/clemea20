@@ -9,7 +9,6 @@ sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.co
 sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/apiserver-deployment-template.yaml > yaml/apiserver-deployment-ready.yaml
 sed -e "s/apicTenant/$HOSTNAME/g;s/DBHOST/$HOSTNAME-mysql.csc.richfield.cisco.com/g;s/DBPASS/C1sco123/g;s/DBUSER/predator/g" yaml/frontend-deployment-template.yaml > yaml/frontend-deployment-ready.yaml
 
-s/apicTenant/$HOSTNAME
 
 # Services
 kubectl create -f yaml/apiserver-service.yaml

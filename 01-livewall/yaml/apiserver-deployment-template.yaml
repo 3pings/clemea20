@@ -15,28 +15,14 @@ spec:
     spec:
       containers:
       - env:
-        - name: appd_appname
-          value: "livewall-yaml"
-        - name: appd_tiername
-          value: "apiserver"
-        - name: appd_hostname
-          value: "192.168.130.210"
-        - name: appd_port
-          value: "8090"
-        - name: appd_sslenabled
-          value: "false"
-        - name: appd_account
-          value: "GREMLINS"
-        - name: appd_accesskey
-          value: "9e3b433c-d509-4ea1-bb3b-05409a5aab24"
-        - name: db_host
+        - name: dbHost
           value: "DBHOST"
-        - name: db_user
+        - name: dbUser
           value: "DBUSER"
-        - name: db_pass
+        - name: dbPass
           value: "DBPASS"
-        - name: db_database
+        - name: dbName
           value: "livewall"
-        image: 10.139.12.210/cl-wall/apiserver:latest
+        image: 3pings/livewall-api:latest
         imagePullPolicy: Always
         name: livewall-apiserver
